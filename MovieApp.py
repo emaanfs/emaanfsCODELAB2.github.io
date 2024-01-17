@@ -249,7 +249,7 @@ class MovieGeneratorApp:
 # FUNCTION FOR NEXT BTN TO DISPLAY NEXT MOVIE
     def next_movie(self):
         if self.movie_results and self.current_movie_index < len(self.movie_results) - 1:
-            self.current_movie_index += 1
+            self.current_movie_index += 1  ## increment to move foward
             self.movie_info(self.movie_results[self.current_movie_index])
         else:
             messagebox.showinfo("Sorry!", "No more movies in the list.")
@@ -258,7 +258,7 @@ class MovieGeneratorApp:
 # FUNCTION FOR PREVIOUS BTN TO DISPLAY NEXT MOVIE
     def prev_movie(self):
         if self.movie_results and self.current_movie_index > 0:
-            self.current_movie_index -= 1
+            self.current_movie_index -= 1 ## decrement to move backwrads
             self.movie_info(self.movie_results[self.current_movie_index])
         else:
             messagebox.showinfo("ERROR!", "Cannot go more further.")
